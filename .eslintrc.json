@@ -1,0 +1,178 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "android/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.spec.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Page", "Component"]
+          }
+        ],
+        "quote-props": [
+          "error",
+          "as-needed",
+          {
+            "keywords": true
+          }
+        ],
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "enumMember",
+            "format": [
+              "PascalCase",
+              "camelCase",
+              "snake_case",
+              "UPPER_CASE"
+            ]
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/no-attribute-decorator": "error",
+        "@angular-eslint/no-forward-ref": "error",
+        "@angular-eslint/use-component-view-encapsulation": "off",
+        "@typescript-eslint/array-type": [
+          "error",
+          {
+            "default": "array-simple"
+          }
+        ],
+        "@typescript-eslint/explicit-member-accessibility": [
+          "off",
+          {
+            "accessibility": "explicit"
+          }
+        ],
+        "@typescript-eslint/member-ordering": "off",
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": "error",
+        "@typescript-eslint/no-var-requires": "error",
+        "arrow-parens": [
+          "off",
+          "always"
+        ],
+        "array-bracket-spacing": [
+          "error",
+          "always",
+          {"singleValue":true}
+        ],
+        "object-curly-spacing": [
+          "error",
+          "always"
+        ],
+        "computed-property-spacing": [
+          "error",
+          "never"
+        ],
+        "comma-dangle": "off",
+        "@typescript-eslint/comma-dangle": [
+          "error",
+          "always-multiline"
+        ],
+        "id-blacklist": "error",
+        "import/order": "off",
+        "max-len": "off",
+        "no-empty": [
+          "error",
+          {
+            "allowEmptyCatch": true
+          }
+        ],
+        "no-fallthrough": "off",
+        "object-shorthand": "off",
+        "space-before-function-paren": "off",
+        "quotes": "off",
+        "@typescript-eslint/quotes": [
+          "error",
+          "backtick",
+          {
+            "avoidEscape": true
+          }
+        ],
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+            "vars": "local",
+            "args": "none",
+            "ignoreRestSiblings": true,
+            "argsIgnorePattern": "^_"
+          }
+        ],
+        "indent": "off",
+        "@typescript-eslint/indent": [
+          "error",
+          2,
+          {
+            "SwitchCase": 1
+          }
+        ],
+        "no-console": ["error",
+          {
+            "allow": ["error"]
+          }
+        ],
+        "semi": "off",
+        "@typescript-eslint/semi": [
+          "error"
+        ],
+        "@typescript-eslint/member-delimiter-style": [
+          "error",
+          {
+            "multiline": {
+              "delimiter": "semi",
+              "requireLast": true
+            },
+            "singleline": {
+              "delimiter": "semi",
+              "requireLast": true
+            }
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}
